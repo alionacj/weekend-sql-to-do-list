@@ -1,5 +1,7 @@
 # Weekend Challenge: Client-Server-Database To-Do List App
 
+## Introduction
+
 Hello Primers! 
 
 Welcome to another weekend challenge!
@@ -82,17 +84,17 @@ We would recommend you spend some time thinking about how to approach this probl
 
 ---
 
-## Stretch Goals
+## [ ] Stretch Goals
 
-Add Bootstrap to the front end and style it up!
--  Buttons -- make the creation buttons and completion buttons green and the delete red.
--  Inputs -- make your text inputs styled in the bootstrap way
--  Responsive -- make your app responsive to different screen sizes.
+[ ] Add Bootstrap to the front end and style it up!
+-  [ ] Buttons -- make the creation buttons and completion buttons green and the delete red.
+-  [ ] Inputs -- make your text inputs styled in the bootstrap way
+-  [ ] Responsive -- make your app responsive to different screen sizes.
 
-Add a "confirm" pop-up!
+[ ] Add a "confirm" pop-up!
 - In whatever fashion you would like, create an 'are you sure: yes / no' option when deleting a task.
     - Some library-based options are Bootstrap Modals or Sweet Alerts. You'll need to Google for these, but be sure to source these via CDN links. (`npm install` will **not** work for client-side CSS/JS libraries until we get to React week.)
 
-Add a `"completedAt" TIMESTAMPTZ` column to the `"todos"` table!
-- When a to-do is marked as completed, this column should reflect exactly when that happend.
-- Be sure to show the completed date on the frontend in a pretty format.
+[ ] Add a `"completedAt" TIMESTAMPTZ` column to the `"todos"` table!
+- [ ] When a to-do is marked as completed, this column should reflect exactly when that happend.
+- [ ] Be sure to show the completed date on the frontend in a pretty format.

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,72 @@
   <script src="./scripts/client.js"></script>
   <title>SQL TO-DO List</title>
 </head>
+
 <body>
   <header>
-    <h1>SQL TO-DO List</h1>
+    <h1>To - Do List</h1>
   </header>
 
+  <main>
+    <input type="text" placeholder="Enter text here" required>
+    <button>Submit</button>
+
+    <div>
+
+      <h3>
+        Uncompleted
+      </h3>
+
+      <ul>
+        <!-- list items go here -->
+        <li>
+          <button>✅</button>
+          <button>❌</button>
+          Sample to-do item
+        </li>
+        <li>
+          <button>✅</button>
+          <button>❌</button>
+          Sample to-do item
+        </li>
+        <li>
+          <button>✅</button>
+          <button>❌</button>
+          Sample to-do item
+        </li>
+      </ul>
+
+    </div>
+
+    <div>
+
+      <h3>
+        Completed
+      </h3>
+
+      <span>Clear accomplishments</span>
+      <button>🧨</button>
+
+      <ul>
+        <!-- completed items go here -->
+        <li>
+          <button disabled>✅</button>
+          Sample completed item
+        </li>
+        <li>
+          <button disabled>✅</button>
+          Sample completed item
+        </li>
+        <li>
+          <button disabled>✅</button>
+          Sample completed item
+        </li>
+      </ul>
+
+    </div>
+
+  </main>
+
 </body>
+
 </html>

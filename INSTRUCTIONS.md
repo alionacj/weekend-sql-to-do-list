@@ -48,27 +48,27 @@ We would recommend you spend some time thinking about how to approach this probl
 
 [X] Create a new database through Postico. Name it `weekend-to-do-app`. Then, run the queries found `database.sql` to create a `todos` table and populate it with two initial to-do items.
 
-## [ ] Testing Requirements:
+## [X] Testing Requirements:
 
-1. [ ] The input you use to collect "to-do text" user input must have:
+1. [X] The input you use to collect "to-do text" user input must have:
     * `data-testid="toDoTextInput"`
-2. [ ] The button that a user clicks to "create" a new to-do must have:
+2. [X] The button that a user clicks to "create" a new to-do must have:
   * `data-testid="submitButton"`
-3. [ ] Each rendered to-do item must have:
+3. [X] Each rendered to-do item must have:
     * `data-testid="toDoItem"`
-    * [ ] It doesn't matter what HTML element you choose to use to represent a single to-do item, but whatever you choose to represent "one" to-do item must have this attribute. Examples:
+    * It doesn't matter what HTML element you choose to use to represent a single to-do item, but whatever you choose to represent "one" to-do item must have this attribute. Examples:
       * ```js
           <li data-testid="toDoItem">...</li>
           <tr data-testid="toDoItem">...</tr>
           <div data-testid="toDoItem">...</div>
           <article data-testid="toDoItem">...</article>
         ```
-4. [ ] Each to-do item's "delete" button must have:
+4. [X] Each to-do item's "delete" button must have:
     * `data-testid="deleteButton"`
-5. [ ] Each to-do item's "mark complete" button must have:
+5. [X] Each to-do item's "mark complete" button must have:
     * `data-testid="completeButton"`
 6. Each completed to-do item must have:
-    * [ ] A CSS class of `completed` applied to its `data-testid="toDoItem"` element.
+    * [X] A CSS class of `completed` applied to its `data-testid="toDoItem"` element.
     * Examples of "completed" to-do items:
       * ```js
           <li data-testid="toDoItem" class="completed">...</li>

@@ -16,8 +16,8 @@
   </header>
 
   <main>
-    <input type="text" placeholder="Enter text here" required>
-    <button>Submit</button>
+    <input type="text" placeholder="Enter text here" `data-testid="toDoTextInput"` required>
+    <button `data-testid="submitButton"`>Submit</button>
 
     <div>
 
@@ -28,19 +28,19 @@
       <ul>
         <!-- list items go here -->
         <li>
-          <button>✅</button>
-          <button>❌</button>
-          Sample to-do item
+          <button `data-testid="completeButton"`>✅</button>
+          <button `data-testid="deleteButton"`>❌</button>
+          <span `data-testid="toDoItem"`>Sample to-do item</span>
         </li>
         <li>
-          <button>✅</button>
-          <button>❌</button>
-          Sample to-do item
+          <button `data-testid="completeButton"`>✅</button>
+          <button `data-testid="deleteButton"`>❌</button>
+          <span `data-testid="toDoItem"`>Sample to-do item</span>
         </li>
         <li>
-          <button>✅</button>
-          <button>❌</button>
-          Sample to-do item
+          <button `data-testid="completeButton"`>✅</button>
+          <button `data-testid="deleteButton"`>❌</button>
+          <span `data-testid="toDoItem"`>Sample to-do item</span>
         </li>
       </ul>
 
@@ -52,22 +52,22 @@
         Completed
       </h3>
 
-      <span>Clear accomplishments</span>
-      <button>🧨</button>
-
       <ul>
         <!-- completed items go here -->
         <li>
-          <button disabled>✅</button>
-          Sample completed item
+          <button  `data-testid="completeButton"` disabled>✅</button>
+          <button `data-testid="deleteButton"` disabled>❌</button>
+          <span class="completed" `data-testid="toDoItem"`>Sample to-do item</span>
         </li>
         <li>
-          <button disabled>✅</button>
-          Sample completed item
+          <button `data-testid="completeButton"` disabled>✅</button>
+          <button `data-testid="deleteButton"` disabled>❌</button>
+          <span class="completed" `data-testid="toDoItem"`>Sample to-do item</span>
         </li>
         <li>
-          <button disabled>✅</button>
-          Sample completed item
+          <button `data-testid="completeButton"` disabled>✅</button>
+          <button `data-testid="deleteButton"` disabled>❌</button>
+          <span class="completed" `data-testid="toDoItem"`>Sample to-do item</span>
         </li>
       </ul>
 

@@ -22,9 +22,9 @@ As software developers, our job is to learn new stuff often. You'll probably be 
 
 * Create a front-end experience that allows a user to create a to-do item.
 * When a to-do item is created:
-    * [ ] It should be stored inside the database table.
-    * [ ] The DOM should update and display the new to-do item.
-* [ ] Each to-do item should have a button to 'Complete' or 'Delete' it.
+    * [X] It should be stored inside the database table.
+    * [X] The DOM should update and display the new to-do item.
+* [X] Each to-do item should have a button to 'Complete' or 'Delete' it.
 * When a to-do item is completed:
     * [ ] Its `isComplete` value (in the database table) should be updated to `TRUE`.
     * [ ] A CSS class of `completed` should be applied to the to-do item.

@@ -42,15 +42,18 @@ router.post('/', (req, res) => {
 router.put('/:id', (req, res) => {
     console.log('PUT request received. Editing item...')
     let itemId = req.params.id
+    let timeStamp = req.body.date
+    console.log("timestamp:", timeStamp)
     const sqlQueryText = 
         `
             UPDATE "todos"
-            SET "isComplete" = $1
+            SET "isComplete" = $1, "completedAt" = $3
             WHERE "id" = $2;
         `
     const sqlQueryValues = [
         true,
-        itemId
+        itemId,
+        timeStamp
     ]
     pool.query(sqlQueryText, sqlQueryValues)
     .then((dbResult) => {

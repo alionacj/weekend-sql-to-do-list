@@ -1,7 +1,6 @@
 console.log('JS is sourced!');
 getItems()
 
-
 function getItems() {
     console.log('Called getItems(). Getting to-do items...')
     axios ({
@@ -24,8 +23,8 @@ function renderDOM(todos) {
             document.getElementById('toDoIncomplete').innerHTML +=
             `
                 <li>
-                    <button onclick=markComplete(${todo.id}) data-testid="completeButton">✅</button>
-                    <button onclick=deleteItem(${todo.id}) data-testid="deleteButton">❌</button>
+                    <button onclick="markComplete(event, ${todo.id})" data-testid="completeButton">✅</button>
+                    <button onclick="deleteItem(${todo.id})" data-testid="deleteButton">❌</button>
                     <span data-testid="toDoItem">${todo.text}</span>
                 </li>
             `
@@ -35,7 +34,8 @@ function renderDOM(todos) {
                 <li>
                     <button disabled data-testid="completeButton">✅</button>
                     <button onclick=deleteItem(${todo.id}) data-testid="deleteButton">❌</button>
-                    <span data-testid="toDoItem">${todo.text}</span>
+                    <span class="completed" data-testid="toDoItem">${todo.text}</span>
+                    <span>Completed at: ${todo.completedAt}</span>
                 </li>
             `
         }
@@ -55,6 +55,7 @@ function addItem(event) {
         data: newItem
     })
     .then((response) => {
+        document.getElementById('newItemInput').value = ''
         console.log(' - POST successful. Updating display...')
         getItems()
     })
@@ -62,14 +63,19 @@ function addItem(event) {
         console.error('Error! Something went wrong')
     })
 }
-function markComplete(itemId) {
+function markComplete(event, itemId) {
     console.log(`Called markComplete(). Marking item id ${itemId} complete...`)
+    let date = new Date().toISOString()
+        // retrieved date formatting from:
+        // https://stackoverflow.com/questions/56820404/convert-from-js-timestamp-to-postgresql-timestamp-with-time-zone
     axios({
         method: "PUT",
-        url: `/todos/${itemId}`
+        url: `/todos/${itemId}`,
+        data: {date}
     })
     .then((response) => {
         console.log(' - PUT request successful! Updating display...')
+
         getItems()
     })
     .catch((error) => {

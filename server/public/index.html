@@ -2,49 +2,55 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" >
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <script src="./scripts/axios.js"></script>
-  <script src="./scripts/client.js"></script>
+  <!-- bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script defer src="./scripts/axios.js"></script>
+  <!-- boostrap CDN -->
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script defer src="./scripts/client.js"></script>
   <title>SQL TO-DO List</title>
 </head>
 
 <body>
-  <header>
+
+  <div class="container pt-5"> <!-- container -->
+
+  <div class="row"> <!-- header row -->
+  <header class="row">
     <h1>To - Do List</h1>
   </header>
+  </div> <!-- header row -->
 
   <main>
+
+    <div class="row"> <!--- input row -->
+    <div class="col-6"> <!-- input col -->
     <input id="newItemInput" type="text" placeholder="Enter text here" data-testid="toDoTextInput" required>
     <button id="addItemButton" onclick="addItem(event)" data-testid="submitButton">Submit</button>
+    </div> <!-- input col -->
+    </div> <!-- input row -->
 
-    <div>
-
-      <h3>
-        Uncompleted
-      </h3>
-
-      <ul id="toDoIncomplete">
-        <!-- list items go here -->
-      </ul>
-
-    </div>
-
-    <div>
-
-      <h3>
-        Completed
-      </h3>
-
-      <ul id="toDoComplete">
-        <!-- completed items go here -->
-      </ul>
-
-    </div>
-
+    <div class="row"> <!-- tasks row -->
+      <div class="col pt-5"> <!-- uncompleted column -->
+        <h3>
+          Uncompleted
+        </h3>
+        <ul id="toDoIncomplete">
+          <!-- list items go here -->
+        </ul>
+      </div> <!-- uncompleted column-->
+      <div class="col pt-5"> <!-- completed column -->
+        <h3>
+          Completed
+        </h3>
+        <ul id="toDoComplete">
+          <!-- completed items go here -->
+        </ul>
+      </div> <!-- completed column -->
+    </div> <!-- tasks row -->
   </main>
-
 </body>
-
 </html>

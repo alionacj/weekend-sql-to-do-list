@@ -96,5 +96,5 @@ We would recommend you spend some time thinking about how to approach this probl
     - Some library-based options are Bootstrap Modals or Sweet Alerts. You'll need to Google for these, but be sure to source these via CDN links. (`npm install` will **not** work for client-side CSS/JS libraries until we get to React week.)
 
 [X] Add a `"completedAt" TIMESTAMPTZ` column to the `"todos"` table!
-- [ ] When a to-do is marked as completed, this column should reflect exactly when that happend.
+- [X] When a to-do is marked as completed, this column should reflect exactly when that happend.
 - [ ] Be sure to show the completed date on the frontend in a pretty format.

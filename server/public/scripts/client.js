@@ -23,19 +23,48 @@ function renderDOM(todos) {
             document.getElementById('toDoIncomplete').innerHTML +=
             `
                 <li>
-                    <button onclick="markComplete(event, ${todo.id})" data-testid="completeButton">✅</button>
-                    <button onclick="deleteItem(${todo.id})" data-testid="deleteButton">❌</button>
-                    <span data-testid="toDoItem">${todo.text}</span>
+                    <button
+                        onclick="markComplete(event, ${todo.id})"
+                        data-testid="completeButton"
+                    >
+                    ✅
+                    </button>
+                    <button
+                        onclick="deleteItem(${todo.id})"
+                        data-testid="deleteButton"
+                    >
+                    ❌
+                    </button>
+                    <span data-testid="toDoItem">
+                        ${todo.text}
+                    </span>
                 </li>
             `
         } else {
             document.getElementById('toDoComplete').innerHTML +=
             `
                 <li>
-                    <button disabled data-testid="completeButton">✅</button>
-                    <button onclick=deleteItem(${todo.id}) data-testid="deleteButton">❌</button>
-                    <span class="completed" data-testid="toDoItem">${todo.text}</span>
-                    <span>Completed at: ${todo.completedAt}</span>
+                    <button
+                        disabled
+                        data-testid="completeButton"
+                    >
+                        ✅
+                    </button>
+                    <button
+                        onclick=deleteItem(${todo.id})
+                        data-testid="deleteButton"
+                    >
+                        ❌
+                    </button>
+                    <span
+                        class="completed"
+                        data-testid="toDoItem"
+                    >
+                        ${todo.text}
+                    </span>
+                    <span>
+                        Completed at: ${todo.completedAt}
+                    </span>
                 </li>
             `
         }
